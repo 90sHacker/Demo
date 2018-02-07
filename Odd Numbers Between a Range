@@ -1,0 +1,58 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace test
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] myArray = OddNumbers(40, 50);
+            for(int i = 0; i < myArray.Length; i++)
+            {
+                Console.WriteLine(myArray[i]);
+            }
+            Console.ReadLine();
+        }
+        
+        public static int[] OddNumbers(int l, int r)
+        {
+            int num = 0;
+            int n = 0;
+            int[] arrayHolder = { };
+            if(l % 2 == 0 && r % 2 == 0)
+            {
+                n = (r - l) / 2;
+                arrayHolder = new int[n];
+            }
+            if (l % 2 == 1 && r % 2 == 1)
+            {
+                n = ((r - l) / 2) + 1;
+                arrayHolder = new int[n];
+            }
+            if (l % 2 == 1 && r % 2 == 1)
+            {
+                n = ((r - l) / 2) + 1;
+                arrayHolder = new int[n];
+            }
+            if (l % 2 == 1 && r % 2 == 1)
+            {
+                n = ((r - l) / 2) + 1;
+                arrayHolder = new int[n];
+            }
+            int i = 0;
+            for (num = l; num <= r; num++)
+            {
+                if(num % 2 == 1)
+                {
+                   arrayHolder[i] = num;
+                    i++;
+                }
+            }
+            return (arrayHolder);
+        }
+    }
+}
